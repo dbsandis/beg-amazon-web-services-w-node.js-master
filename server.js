@@ -68,13 +68,13 @@ var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
 
 
-    var connection  = mysql.createConnection(globals.database);
+    var connection  = mysql.createConnection(globals.database());
     //var connection = mysql.createConnection('mysql://root:mynd864@localhost:3306/photoalbums?debug=true');
     
     
     connection.connect(function(err) {
         if(err){
-            console.log('error connecting to database:'+ err.stack);
+            console.log('error connecting to database:');
         } else {
             console.log('connected to database!');
         }
