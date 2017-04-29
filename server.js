@@ -69,8 +69,6 @@ var server = app.listen(app.get('port'), function() {
 
 
     var connection  = mysql.createConnection(globals.database());
-    //var connection = mysql.createConnection('mysql://root:mynd864@localhost:3306/photoalbums?debug=true');
-    
     
     connection.connect(function(err) {
         if(err){
