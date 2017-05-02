@@ -86,7 +86,8 @@ router.post('/register', function(req, res) {
 			res.status(400).send({error: 'Invalid email'});
 		}
 	} else {
-		res.status(400).send({error: 'Missing required field:'+ req.param('username')});
+		//res.status(400).send({error: 'Missing required field:'+ req.param('username')});
+        res.status(400).send({error: 'Missing required field:'+ req});
 	}
 });
 
